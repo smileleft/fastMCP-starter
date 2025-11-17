@@ -76,3 +76,6 @@ async def test_server_locally():
         print(f"요약 프롬프트 구조: {prompt_messages}")
 
 
+if __name__ == "__main__":
+    print("\n--- starting FastMCP server with __main__ ---")
+    mcp.run()
