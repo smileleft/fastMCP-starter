@@ -2,9 +2,16 @@
 from fastmcp import FastMCP
 import asyncio
 
+APP_CONFIG = {"theme": "dark", "version": "1.1", "feature_flags": ["new_dashboard"]}
+
 mcp = FastMCP(name="my first mcp server")
 
 print("First FastMCP server is created.")
+
+@mcp.resource("data://config")
+def get_config() -> dict:
+  """application config"""
+  return APP_CONFIG
 
 @mcp.tool()
 def greet(name: str) -> str:
