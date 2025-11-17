@@ -34,4 +34,16 @@ def add(a: int, b: init) -> int:
   return a + b
 
 print("tool 'greet' and 'add' is added.")
-  
+
+
+@mcp.prompt("summarize")
+async def summarize_prompt(text: str) -> list[dict]:
+    """prompt for summarize requested text"""
+    return [
+        {"role": "system", "content": "당신은 요약에 능숙한 유용한 조수입니다."},
+        {"role": "user", "content": f"다음 텍스트를 요약해 주세요:\n\n{text}"}
+    ]
+
+print("Prompt 'summarize' added.")
+
+
