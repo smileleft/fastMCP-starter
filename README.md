@@ -1,5 +1,5 @@
 # fastMCP-starter
-starter repository for fastMCP <br/<
+starter repository for fastMCP <br/>
 https://github.com/jlowin/fastmcp
 
 ## Install fastMCP
